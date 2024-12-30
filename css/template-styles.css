@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;        
+}
+
+body {
+    height: 200vh; /* Increase height to make scrolling visible */
+    background-color: #fff;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;        
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: transparent;
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.navbar.sticky {
+    background-color: #000;
+    border-radius: 50px;
+    padding: 10px 30px;
+    width: 300px; /* Adjust width as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    justify-content: center; /* Center items in sticky state */
+    margin-top: 20px; /* Add space from the top */
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    transition: opacity 0.4s ease; /* Transition for opacity */
+}
+
+.navbar.sticky .logo {
+    opacity: 0; /* Hide logo in sticky state */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    transition: opacity 0.4s ease; /* Transition for opacity */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: color 0.4s ease;
+}
+
+.navbar.sticky .nav-links {
+    opacity: 0; /* Hide nav links in sticky state */
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001; /* Above navbar */
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    right: 0; /* Slide in from the right */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Arrange links in a column */
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Reduced margin for links in the sidebar */
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 5px; /* Add some padding for spacing */
+}
+
+.close-btn {
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 100px 40px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links in mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    .sidebar {
+        display: block; /* Ensure sidebar is block in mobile */
+    }
+}
+/* footer styling  */
+footer{
+    display: grid;
+    grid-template-columns: 3fr 5fr 3fr;
+    background-color: #EDEDED ;
+}
+.footer{
+    padding: 100px;
+    background-color: #EDEDED ;
+}
+.footer .socials{
+    display: flex;
+    justify-content: Center;
+    align-items: center;
+    gap: 30px;
+}
+.footer .border{
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 5px;
+}
+.footer .footer-links ul{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 50px;
+}
+.footer .footer-links ul a{
+    text-decoration: none;
+    color: black;
+} 
+.copyright{
+    text-align: center;
+    font-size: 15px;
+    background-color: #EDEDED ;
+
+}
+.copyright span{
+    color: #3E75FF;
+}
+.footer .logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+
+}
+.animate{
+transition: transform 0.5s ease;
+}
+
+.animate:hover {
+transform: translate(20px, -10px); /* Moves 20px to the right and 10px upwards */
+}
+
+
+
+
+@media (max-width: 575px) {
+/* Styles for portrait phones */
+.footer .socials{
+    gap: 15px;
+}
+.footer{
+    padding: 50px;
+}
+
+
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+/* Styles for landscape phones */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+/* Styles for tablets */
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+/* Styles for desktops */
+}
+
+@media (min-width: 1200px) {
+/* Styles for large desktops */
+}
+
+
+
+

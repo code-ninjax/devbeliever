@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #fff;
+      color: #000;
+    }
+    h1 {
+      text-align: center;
+      font-weight: bold;
+      color: #000;
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .skill-box {
+      flex: 1 1 calc(50% - 20px); /* Two columns */
+      box-sizing: border-box;
+    }
+    .skill {
+      margin-bottom: 20px;
+    }
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .progress-bar {
+      background: #ccc;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+    }
+    .progress {
+      background: #000;
+      height: 100%;
+      width: 0;
+      border-radius: 20px;
+      transition: width 1s ease;
+    }
+    /* Animation for Progress Bars */
+    .progress.animate {
+      animation: loadProgress 1s forwards;
+    }
+
+    @keyframes loadProgress {
+      from {
+        width: 0;
+      }
+      to {
+        width: var(--target-width);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .skill-box {
+        flex: 1 1 100%; /* Stacks skills on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Skills</h1>
+  <div class="skills-container">
+    <div class="skill-box">
+      <div class="skill">
+        <div class="skill-header">
+          <span>HTML</span><span>90%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="--target-width: 90%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span>CSS</span><span>80%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="--target-width: 80%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span>JavaScript</span><span>60%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="--target-width: 60%;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="skill-box">
+      <div class="skill">
+        <div class="skill-header">
+          <span>PHP</span><span>70%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="--target-width: 70%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span>MySQL</span><span>85%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="--target-width: 85%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span>Figma</span><span>75%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="--target-width: 75%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Apply animations sequentially
+    const progressBars = document.querySelectorAll('.progress');
+    progressBars.forEach((progress, index) => {
+      setTimeout(() => {
+        progress.classList.add('animate');
+      }, index * 300); // Staggered delay (300ms between bars)
+    });
+  </script>
+</body>
+</html>

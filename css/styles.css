@@ -1,0 +1,119 @@
+/* universal styling */
+
+*{
+    --primary-color: #fff;
+    --secondary-color: #000;
+
+}
+
+
+
+/* hero section styling  */
+.hero .hero-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.hero{
+
+}
+.hero .hero-section .img{
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 100px 10px 100px 10px;
+    width: 450px;  /* New width */
+    height: 562px; /* New height maintaining the aspect ratio */
+    justify-self: end;
+}
+.hero .hero-section img{
+    border-radius: 100px 10px 100px 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.hero .hero-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 100px;
+
+}
+
+.hero .hero-section .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-self: start;
+
+}
+
+.hero .hero-section .text h3{
+    font-size: 16px;
+    color: #555555;
+    font-weight: bold;
+}
+.hero .hero-section .text h2{
+    font-size: 48px;
+    font-weight: bold;
+}
+.hero .hero-section .text h4{
+    font-size: 28px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.hero .hero-section .text div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 10px;
+}
+.hero .hero-section .text div button{
+    padding: 10px 20px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #000;
+    /* border: 2px solid #000; */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .hero-section .text div a:nth-child(1) button {
+  background-color: #555; /* Green for the first button */
+  color: #fff;
+
+}
+
+.hero .hero-section .text div a:nth-child(2) button {
+  background-color: #fff; /* Orange for the second button */
+  border: 2px solid black;
+}
+
+.hero .hero-section .text div a:nth-child(3) button {
+  background-color: #555; /* Blue for the third button */
+  color: #fff;
+}
+
+.hero-socials {
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.hero-socials i:nth-child(1) {
+    font-size: 32px;
+    color: #000;
+    border-radius: 50%;    /* Makes it a perfect circle */  
+    cursor: pointer;  
+
+}
+
+.hero-socials i:nth-child(2) {
+  color: #333; /* GitHub color */
+  font-size: 32px;
+  color: #000;
+  cursor: pointer;
+}

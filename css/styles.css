@@ -1,18 +1,7 @@
-/* universal styling */
-
-*{
-    --primary-color: #fff;
-    --secondary-color: #000;
-
-}
 
 
 
-/* hero section styling  */
-.hero .hero-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+
 .hero{
 
 }
@@ -20,7 +9,7 @@
     border: 1px solid #000;
     padding: 10px;
     border-radius: 100px 10px 100px 10px;
-    width: 450px;  /* New width */
+    width: 450px;  /* New width
     height: 562px; /* New height maintaining the aspect ratio */
     justify-self: end;
 }
@@ -117,3 +106,370 @@
   color: #000;
   cursor: pointer;
 }
+
+/* this is the about styling */
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 50px;
+}
+
+.about-title {
+    text-align: center;
+}
+
+.about-title h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.about-grid .middle{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.about-card img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.about-card h2{
+    font-weight: bold;
+    font-size: 18px;
+}
+.about-card p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.about-grid .middle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 80px;
+}
+
+.middle .button{
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+}
+.cv-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.cv-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* this is the experience styling */
+
+.experience{
+
+}
+.experience .experience-title{
+    text-align: center;
+}
+.experience .experience-title h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+}
+.experience .experience-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 50px;
+}
+
+.experience-card{
+    border: 2px solid black;
+    padding: 60px;
+    /* background: #ccc; */
+}
+
+.experience-card-title{
+
+}
+
+.experience-card-title h1{
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+.experience-card-title h2{
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.experience-card-title p{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px; 
+    letter-spacing: 5px;   
+}
+
+.move{
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+}
+
+.service{
+
+}
+
+
+
+.service .service-title{
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.service .service-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+.service .service-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    padding: 20px;
+}
+.service .service-grid .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service .service-grid img{
+    width: 100px;
+    height: 100px;
+}
+
+.service .service-grid .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.service .service-grid .title h2{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.service .service-grid .title span{
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+}
+
+/* this is the skills section  */
+.skills h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.skill-box {
+  flex: 1 1 calc(50% - 20px); /* Two columns */
+  box-sizing: border-box;
+}
+.skill {
+  margin-bottom: 20px;
+}
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.progress-bar {
+  background: #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+}
+.progress {
+  background: #000;
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  transition: width 1s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this is responsive design  */
+@media (max-width: 360px) {}
+
+@media (max-width: 576px) {
+    .hero{
+
+    }
+    
+   .hero .hero-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero .hero-section .text{
+        justify-self: center;
+    }
+    .hero .hero-section .text h3{
+        font-size: 16px;
+        color: #555555;
+        font-weight: bold;
+    }
+    .hero .hero-section .text h2{
+        font-size: 25px;
+    }
+
+    .hero .hero-section .text h4{
+        font-size: 18px;
+    }
+
+    .hero .hero-section .text div{}
+    .hero .hero-section .text div button{
+        padding: 10px 20px;
+        font-size: 8px;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    /* responsive design for the about section  */
+    .about-grid .middle{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .about-title h2 {
+        font-size: 25px;
+    }
+    .about-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .middle .button{
+        grid-column: span 2;
+    }
+
+    /* this is for the experience section  */
+
+    .experience .experience-title h2{
+        font-size: 25px;
+        margin-bottom: 5pxpx;
+    }
+    .experience .experience-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 50px;
+    }
+    
+    .experience-card{
+        padding: 20px;
+    /* background: #ccc; */
+    }
+
+    .move{
+        grid-column: span 1;
+    }
+
+    /* this is for the services section   */
+    .service .service-title{
+        font-size: 25px;
+    }
+
+    .service .service-grid{
+        grid-template-columns: 1fr;
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+      .skill-box {
+        flex: 1 1 100%; /* Stacks skills on smaller screens */
+    }
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 1200px) {}
+
+

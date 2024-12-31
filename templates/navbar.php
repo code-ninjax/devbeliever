@@ -48,7 +48,7 @@
         </ul>
     </div>
 
-    <script>
+<script>
    const navbar = document.getElementById('navbar');
    const hamburger = document.getElementById('hamburger');
    const sidebar = document.getElementById('sidebar');
